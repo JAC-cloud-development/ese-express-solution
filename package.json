@@ -5,14 +5,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.2"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
   }
 }
