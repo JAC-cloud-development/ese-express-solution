@@ -16,9 +16,9 @@ let items = _.cloneDeep(defaultItems);
 export const db = {
     list: () => items,
     insert: (item) => items.push(item),
-    delete: (id) => _.remove(items, (i) => i.id === id),
+    delete: (id) => _.remove(items, (i) => i.id.toString() === id),
     update: (id, item) => {
-        const index = _.findIndex(items, (i) => i.id === id);
+        const index = _.findIndex(items, (i) => i.id.toString() === id);
         if (index != -1) {
             items[index] = _.merge(items[index], _.omit(item, 'id'));
         } else {

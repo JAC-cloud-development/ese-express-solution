@@ -5,6 +5,11 @@ import { db } from './db/fakedb.js'
 
 
 
+
+// NECESSARIO PER LEGGERE IL BODY JSON IN POST E PUT
+app.use(express.json());
+///////////////////////////////////////////////////
+
 // create a route for a GET request to '/' - when that route is reached, run a function
 app.get("/items", function (request, response) {
   /* inside of this callback we have two large objects, request and response
