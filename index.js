@@ -2,7 +2,7 @@
 import express from "express";
 import { db } from './db/fakedb.js'
 // create an object from the express function which we contains methods for making requests and starting the server
-const app = express();
+
 
 
 // create a route for a GET request to '/' - when that route is reached, run a function
@@ -16,8 +16,3 @@ app.get("/items", function (request, response) {
 });
 
 // let's tell our server to listen on port 3000 and when the server starts, run a callback function that console.log's a message
-app.listen(3000, function () {
-  console.log(
-    "The server has started on port 3000. Head to localhost:3000 in the browser and see what's there!"
-  );
-});
